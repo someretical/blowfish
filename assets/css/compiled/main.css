@@ -3331,6 +3331,7 @@ mjx-container {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+  display: inline-block;
 }
 
 /* Fix long tables breaking out of article on mobile */
