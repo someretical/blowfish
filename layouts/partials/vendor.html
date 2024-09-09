@@ -26,7 +26,7 @@
   integrity="{{ $chartJS.Data.Integrity }}"></script>
 {{ end }}
 
-{{/* Katex */}}
+<!-- {{/* Katex */}}
 {{ if .Page.HasShortcode "katex" }}
 {{ $katexCSS := resources.Get "lib/katex/katex.min.css" }}
 {{ $katexCSS := $katexCSS | resources.Fingerprint "sha512" }}
@@ -41,8 +41,14 @@
 {{ $katexFonts := resources.Match "lib/katex/fonts/*" }}
 {{ range $katexFonts }}
 <!-- {{ .RelPermalink }} -->
-{{ end }}
-{{ end }}
+-->
+<!-- {{ end }}
+{{ end }} -->
+
+{{ $jsMathjax := resources.Get "js/load-mathjax.js" }}
+{{ $jsMathjax := $jsMathjax | resources.ExecuteAsTemplate "js/load-mathjax.js" . | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $jsMathjax.RelPermalink }}"
+  integrity="{{ $jsMathjax.Data.Integrity }}" async></script>
 
 {{/* TypeIt */}}
 {{ if .Page.HasShortcode "typeit" }}

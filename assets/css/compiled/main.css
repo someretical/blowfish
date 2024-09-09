@@ -3190,15 +3190,15 @@ body button {
   padding-right:1rem
 }
 
-.prose ul>li:where([dir="rtl"], [dir="rtl"] *),
-.prose ol>li:where([dir="rtl"], [dir="rtl"] *) {
+.prose ul > li:where([dir="rtl"], [dir="rtl"] *),
+.prose ol > li:where([dir="rtl"], [dir="rtl"] *) {
   margin-right:1.75rem;
   padding-left:0px;
   padding-right:0.5rem
 }
 
-.prose ol>li:where([dir="rtl"], [dir="rtl"] *):before,
-.prose ul>li:where([dir="rtl"], [dir="rtl"] *):before {
+.prose ol > li:where([dir="rtl"], [dir="rtl"] *):before,
+.prose ul > li:where([dir="rtl"], [dir="rtl"] *):before {
   left:auto;
   right:0.25rem
 }
@@ -3215,7 +3215,7 @@ body button {
 
 /* Adjust first child within prose */
 
-.prose div.min-w-0.max-w-prose>*:first-child {
+.prose div.min-w-0.max-w-prose > *:first-child {
   margin-top:0.75rem
 }
 
@@ -3248,7 +3248,7 @@ body button {
   color:rgba(var(--color-neutral-400), var(--tw-text-opacity))
 }
 
-.toc ul>li:where([dir="rtl"], [dir="rtl"] *) {
+.toc ul > li:where([dir="rtl"], [dir="rtl"] *) {
   margin-right:0px
 }
 
@@ -3263,7 +3263,7 @@ body button {
   z-index:0
 }
 
-.highlight:hover>.copy-button {
+.highlight:hover > .copy-button {
   visibility:visible
 }
 
@@ -3322,7 +3322,15 @@ body button {
 /* Fix long KaTeX equations on mobile (see https://katex.org/docs/issues.html#css-customization) */
 
 .katex-display {
-  overflow: auto hidden
+  overflow: auto hidden;
+}
+
+/* Fix long Mathjax equations (see https://meta.stackexchange.com/q/325870) */
+
+mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
 }
 
 /* Fix long tables breaking out of article on mobile */
@@ -3847,36 +3855,36 @@ pre {
 .thumbnail {
   min-width: 300px;
   height: 180px;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .thumbnail_card {
   height: 200px;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .thumbnail_card_related {
   height: 150px;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .thumbnail_card_term {
   height: 150px;
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .single_hero_basic {
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .single_hero_round {
@@ -3886,9 +3894,9 @@ pre {
 }
 
 .single_hero_background {
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: calc(100% + 40px);
   z-index: -10;
   margin-left: -20px;
@@ -3941,19 +3949,25 @@ pre {
 .nested-menu:hover + .menuhide {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.3s, opacity 0.3s ease-in-out ;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s ease-in-out;
 }
 
 .menuhide:hover {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.3s, opacity 0.3s ease-in-out ;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s ease-in-out;
 }
 
 .menuhide {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.3s, opacity 0.3s ease-in-out ;
+  transition:
+    visibility 0.3s,
+    opacity 0.3s ease-in-out;
   z-index: 1000;
 }
 
