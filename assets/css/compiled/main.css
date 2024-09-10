@@ -1016,13 +1016,11 @@ select {
   color:var(--tw-prose-links);
   text-decoration:none;
   font-weight:500;
-  text-decoration-color:rgba(var(--color-primary-300), 1);
 }
 
 .prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)):hover {
-  color:rgba(var(--color-primary-600), 1);
-  text-decoration:none;
-  border-radius:0.09rem
+  color:var(--tw-prose-links);
+  text-decoration:underline
 }
 
 .prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -1243,7 +1241,7 @@ select {
 }
 
 .prose :where(a code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  color:var(--tw-prose-code)
+  color:var(--tw-prose-links)
 }
 
 .prose :where(h1 code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -1383,7 +1381,7 @@ select {
   --tw-prose-captions:rgba(var(--color-neutral-500), 1);
   --tw-prose-kbd:#111827;
   --tw-prose-kbd-shadows:17 24 39;
-  --tw-prose-code:rgba(var(--color-secondary-700), 1);
+  --tw-prose-code:rgba(var(--color-neutral-700), 1);
   --tw-prose-pre-code:rgba(var(--color-neutral-700), 1);
   --tw-prose-pre-bg:rgba(var(--color-neutral-50), 1);
   --tw-prose-th-borders:rgba(var(--color-neutral-500), 1);
@@ -1401,7 +1399,7 @@ select {
   --tw-prose-invert-captions:rgba(var(--color-neutral-400), 1);
   --tw-prose-invert-kbd:#fff;
   --tw-prose-invert-kbd-shadows:255 255 255;
-  --tw-prose-invert-code:rgba(var(--color-secondary-400), 1);
+  --tw-prose-invert-code:rgba(var(--color-neutral-300), 1);
   --tw-prose-invert-pre-code:rgba(var(--color-neutral-200), 1);
   --tw-prose-invert-pre-bg:rgba(var(--color-neutral-700), 1);
   --tw-prose-invert-th-borders:rgba(var(--color-neutral-500), 1);
@@ -1561,11 +1559,11 @@ select {
 }
 
 .prose-invert :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  text-decoration-color:rgba(var(--color-neutral-600), 1);
+  text-decoration-color:var(--tw-prose-invert-links);
 }
 
 .prose-invert :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)):hover {
-  color:rgba(var(--color-primary-400), 1)
+  color:var(--tw-prose-invert-links)
 }
 
 .prose-invert :where(kbd):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -4952,11 +4950,11 @@ pre {
 }
 
 .dark\:prose-invert:is(.dark *) :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
-  text-decoration-color:rgba(var(--color-neutral-600), 1);
+  text-decoration-color:var(--tw-prose-invert-links);
 }
 
 .dark\:prose-invert:is(.dark *) :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)):hover {
-  color:rgba(var(--color-primary-400), 1)
+  color:var(--tw-prose-invert-links)
 }
 
 .dark\:prose-invert:is(.dark *) :where(kbd):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
